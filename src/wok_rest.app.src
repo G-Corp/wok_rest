@@ -1,0 +1,15 @@
+{application, wok_rest,
+ [
+  {description, ""},
+  {vsn, "0.1.2"},
+  {modules, []},
+  {applications, [
+                  kernel
+                  , stdlib
+                  , syntax_tools
+                  , compiler
+                  , crypto
+                  , goldrush
+                  , lager
+                 ]}
+ ]}.

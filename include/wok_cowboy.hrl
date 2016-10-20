@@ -1,0 +1,3 @@
+-define(DEFAULT_REST_PORT, 8080).
+-define(DEFAULT_REST_IP, "0.0.0.0").
+-define(DEFAULT_REST_MAX_CONN, 100).
