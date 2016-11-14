@@ -1,10 +1,10 @@
-%{"bucs": {:hex, :bucs, "0.1.9", "810fdfeb83adf127e6303fbb1e8139bd575699dee8204f46f162908b5f343cf5", [:rebar3, :mix, :make], []},
+%{"bucs": {:hex, :bucs, "1.0.0", "851b1530f29c9a793f336d47d95967cd77388ed414d71e3c0babd9253ba6ae3b", [:rebar3, :mix, :make], []},
   "cowboy": {:git, "https://github.com/ninenines/cowboy.git", "dbb636034f20736e16eb9d6c809217c9525b6cbd", [tag: "2.0.0-pre.3"]},
-  "cowboy_default_static_file": {:git, "https://github.com/botsunit/cowboy_default_static_file.git", "6efbae3cdd3aba051f005e142b488ec6d520d3c1", [branch: "master"]},
-  "cowlib": {:git, "https://github.com/ninenines/cowlib", "0d0b0d7937f77cd5ee11268863aeab19b65db94d", [ref: "master"]},
-  "doteki": {:hex, :doteki, "0.1.13", "c78ba7b2373371d5319896f462d437456e7c9de75ed79aa433bac8532235057f", [:rebar3, :mix, :make], [{:bucs, "~> 0.1.9", [hex: :bucs, optional: false]}]},
+  "cowboy_default_static_file": {:git, "https://github.com/botsunit/cowboy_default_static_file.git", "35c036947d575bbff28804adce1fbd5e5e687f03", [branch: "master"]},
+  "cowlib": {:git, "https://github.com/ninenines/cowlib", "8e6d0f462850a90bd8a60995f52027839288d038", [ref: "master"]},
+  "doteki": {:hex, :doteki, "1.0.0", "52cfb4e8d92e85464c4434131215fa27d8b13c992ae3fba572c2478ed55d68a2", [:rebar3, :mix, :make], [{:bucs, "~> 1.0.0", [hex: :bucs, optional: false]}]},
   "erlydtl": {:hex, :erlydtl2, "0.11.1", "d612c44299204145fc282c4b2f70af2f29d54fd057219cc64a36c0a908f3756b", [:rebar3], []},
   "goldrush": {:hex, :goldrush, "0.1.8", "2024ba375ceea47e27ea70e14d2c483b2d8610101b4e852ef7f89163cdb6e649", [:rebar3], []},
   "lager": {:hex, :lager, "3.2.1", "eef4e18b39e4195d37606d9088ea05bf1b745986cf8ec84f01d332456fe88d17", [:rebar3], [{:goldrush, "0.1.8", [hex: :goldrush, optional: false]}]},
   "ranch": {:git, "https://github.com/ninenines/ranch", "741bfb73ca663394ecf7a73410506d66f01985a6", [ref: "1.1.0"]},
-  "tempfile": {:git, "https://github.com/botsunit/tempfile.git", "90065e0f21ffbddaadaee0d871a5521c9a765fac", [tag: "1.1.4"]}}
+  "tempfile": {:git, "https://github.com/botsunit/tempfile.git", "377407fc448e41de88685186d01caf9440d7be9d", [tag: "1.1.5"]}}

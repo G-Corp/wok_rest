@@ -25,9 +25,9 @@ defmodule Wok.Rest.Mixfile do
       {:lager, "~> 3.2.0"},
       {:cowboy_default_static_file, git: "https://github.com/botsunit/cowboy_default_static_file.git", branch: "master"},
       {:cowboy, git: "https://github.com/ninenines/cowboy.git", tag: "2.0.0-pre.3"},
-      {:bucs, "~> 0.1.9"},
-      {:doteki, "~> 0.1.13"},
-      {:tempfile, git: "https://github.com/botsunit/tempfile.git", tag: "1.1.4"},
+      {:bucs, "~> 1.0.0"},
+      {:doteki, "~> 1.0.0"},
+      {:tempfile, git: "https://github.com/botsunit/tempfile.git", tag: "1.1.5"},
       {:erlydtl, "~> 0.11.0", hex: :erlydtl2}    
     ]
   end
