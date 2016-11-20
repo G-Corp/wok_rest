@@ -1,10 +1,10 @@
-%{"bucs": {:hex, :bucs, "1.0.0", "851b1530f29c9a793f336d47d95967cd77388ed414d71e3c0babd9253ba6ae3b", [:rebar3, :mix, :make], []},
+%{"bucs": {:hex, :bucs, "1.0.1", "5ae078ef6e40d688406f64d5b0dfccaeebfe403875a6941f50e34d287fcec3ee", [:rebar3, :mix, :make], []},
   "cowboy": {:git, "https://github.com/ninenines/cowboy.git", "dbb636034f20736e16eb9d6c809217c9525b6cbd", [tag: "2.0.0-pre.3"]},
-  "cowboy_default_static_file": {:git, "https://github.com/botsunit/cowboy_default_static_file.git", "35c036947d575bbff28804adce1fbd5e5e687f03", [branch: "master"]},
+  "cowboy_default_static_file": {:git, "https://github.com/botsunit/cowboy_default_static_file.git", "cf23637b426b709ca18ea17649658349909cfa5c", [branch: "master"]},
   "cowlib": {:git, "https://github.com/ninenines/cowlib", "8e6d0f462850a90bd8a60995f52027839288d038", [ref: "master"]},
-  "doteki": {:hex, :doteki, "1.0.0", "52cfb4e8d92e85464c4434131215fa27d8b13c992ae3fba572c2478ed55d68a2", [:rebar3, :mix, :make], [{:bucs, "~> 1.0.0", [hex: :bucs, optional: false]}]},
+  "doteki": {:hex, :doteki, "1.0.1", "29c8cf04a4b600504eeaba784c289117b7e3d8d28bc03b560e0a7b9411835340", [:rebar3, :mix, :make], [{:bucs, "~> 1.0.1", [hex: :bucs, optional: false]}]},
+  "ephemeral": {:git, "https://github.com/botsunit/tempfile.git", "c4fca441b5cbfab530e8def2184ecbf5dfedef87", [branch: "master"]},
   "erlydtl": {:hex, :erlydtl2, "0.11.1", "d612c44299204145fc282c4b2f70af2f29d54fd057219cc64a36c0a908f3756b", [:rebar3], []},
   "goldrush": {:hex, :goldrush, "0.1.8", "2024ba375ceea47e27ea70e14d2c483b2d8610101b4e852ef7f89163cdb6e649", [:rebar3], []},
   "lager": {:hex, :lager, "3.2.1", "eef4e18b39e4195d37606d9088ea05bf1b745986cf8ec84f01d332456fe88d17", [:rebar3], [{:goldrush, "0.1.8", [hex: :goldrush, optional: false]}]},
-  "ranch": {:git, "https://github.com/ninenines/ranch", "741bfb73ca663394ecf7a73410506d66f01985a6", [ref: "1.1.0"]},
-  "tempfile": {:git, "https://github.com/botsunit/tempfile.git", "377407fc448e41de88685186d01caf9440d7be9d", [tag: "1.1.5"]}}
+  "ranch": {:git, "https://github.com/ninenines/ranch", "741bfb73ca663394ecf7a73410506d66f01985a6", [ref: "1.1.0"]}}
