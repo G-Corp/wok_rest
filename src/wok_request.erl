@@ -182,7 +182,9 @@ header(Req, Name) ->
 % @end
 -spec header(wok_req:wok_req(), binary(), any()) -> binary() | any() | undefined.
 header(Req, Name, Default) ->
-  wok_req:header(Req, Name, Default).
+  wok_req:header(Req, bucs:to_binary(
+                        string:to_lower(
+                          bucs:to_string(Name))), Default).
 
 -spec headers(wok_req:wok_req()) -> [{binary(), iodata()}].
 headers(Req) ->
