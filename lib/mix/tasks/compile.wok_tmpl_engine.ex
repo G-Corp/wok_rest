@@ -23,22 +23,25 @@ defmodule Mix.Tasks.Compile.WokTmplEngine do
     compiler_options: @default_compiler_options,
     full_path: @default_full_path_option
   ]
+  @default_force_option false
 
   @spec run(OptionParser.argv) :: :ok | :noop
   def run(args) do
     {opts, _, _} = OptionParser.parse(args, switches: [force: :boolean])
 
     project = Mix.Project.config
-    wok_tmpl_engine_options = project[:wok_tmpl_engine_options] || @default_options
-    compiler_options = wok_tmpl_engine_options[:compiler_options] || @default_compiler_options
-    templates_ext = wok_tmpl_engine_options[:ext] || @default_ext_option
-    source_path = Path.expand(wok_tmpl_engine_options[:source] || @default_source_option) <> "/"
-    full_path = wok_tmpl_engine_options[:full_path] || @default_full_path_option
-    template_suffix = wok_tmpl_engine_options[:suffix] || @default_suffix_option
+    erlydtl_options = project[:erlydtl_options] || @default_options
+    compiler_options = erlydtl_options[:compiler_options] || @default_compiler_options
+    templates_ext = erlydtl_options[:ext] || @default_ext_option
+    manifest = Path.join Mix.Project.manifest_path, ".compile." <> templates_ext
+    source_path = Path.expand(erlydtl_options[:source] || @default_source_option) <> "/"
+    full_path = erlydtl_options[:full_path] || @default_full_path_option
+    template_suffix = erlydtl_options[:suffix] || @default_suffix_option
+    force = opts[:force] || erlydtl_options[:force] || @default_force_option
     dest_path = to_erl_file Mix.Project.compile_path(project)
     mappings = [{source_path, dest_path}]
 
-    Erlang.compile(manifest(), mappings, templates_ext, :beam, opts[:force], fn(input, _output) ->
+    Erlang.compile(manifest, mappings, templates_ext, :beam, force, fn(input, _output) ->
       module = if full_path == true do
         input
         |> String.replace(source_path, "")
