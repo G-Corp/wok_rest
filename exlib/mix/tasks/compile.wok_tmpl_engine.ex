@@ -33,7 +33,7 @@ defmodule Mix.Tasks.Compile.WokTmplEngine do
     erlydtl_options = project[:erlydtl_options] || @default_options
     compiler_options = erlydtl_options[:compiler_options] || @default_compiler_options
     templates_ext = erlydtl_options[:ext] || @default_ext_option
-    manifest = Path.join Mix.Project.manifest_path, ".compile." <> templates_ext
+    manifest = Path.join Mix.Project.manifest_path, ".compile." <> Atom.to_string(templates_ext)
     source_path = Path.expand(erlydtl_options[:source] || @default_source_option) <> "/"
     full_path = erlydtl_options[:full_path] || @default_full_path_option
     template_suffix = erlydtl_options[:suffix] || @default_suffix_option
