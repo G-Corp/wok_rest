@@ -4,7 +4,7 @@ defmodule Wok.Rest.Mixfile do
   def project do
     [
       app: :wok_rest,
-      version: "0.1.2",
+      version: "0.1.0",
       elixir: "~> 1.2",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
@@ -25,9 +25,9 @@ defmodule Wok.Rest.Mixfile do
       {:lager, "~> 3.2.0"},
       {:cowboy_default_static_file, git: "https://github.com/botsunit/cowboy_default_static_file.git", branch: "master"},
       {:cowboy, git: "https://github.com/ninenines/cowboy.git", tag: "2.0.0-pre.3"},
-      {:bucs, "~> 1.0.1"},
-      {:doteki, "~> 1.0.1"},
-      {:ephemeral, git: "https://github.com/botsunit/tempfile.git", branch: "master"},
+      {:bucs, "~> 1.0.2"},
+      {:doteki, "~> 1.0.2"},
+      {:ephemeral, "~> 2.0.0"},
       {:erlydtl, "~> 0.11.0", hex: :erlydtl2}    
     ]
   end
