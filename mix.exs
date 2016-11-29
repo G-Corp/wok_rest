@@ -23,7 +23,7 @@ defmodule Wok.Rest.Mixfile do
   defp deps do
     [
       {:lager, "~> 3.2.0"},
-      {:cowboy_default_static_file, git: "https://github.com/botsunit/cowboy_default_static_file.git", branch: "master"},
+      {:cowboy_default_static_file, git: "https://github.com/botsunit/cowboy_default_static_file.git", tag: "1.3.0"},
       {:cowboy, git: "https://github.com/ninenines/cowboy.git", tag: "2.0.0-pre.3"},
       {:bucs, "~> 1.0.2"},
       {:doteki, "~> 1.0.2"},
