@@ -23,11 +23,11 @@ defmodule Wok.Rest.Mixfile do
   defp deps do
     [
       {:lager, "~> 3.2.0"},
-      {:cowboy_default_static_file, git: "https://github.com/botsunit/cowboy_default_static_file.git", tag: "1.3.0"},
+      {:cowboy_default_static_file, git: "https://github.com/botsunit/cowboy_default_static_file.git", tag: "1.3.1"},
       {:cowboy, git: "https://github.com/ninenines/cowboy.git", tag: "2.0.0-pre.3"},
-      {:bucs, "~> 1.0.2"},
-      {:doteki, "~> 1.0.2"},
-      {:ephemeral, "~> 2.0.0"},
+      {:bucs, "~> 1.0.3"},
+      {:doteki, "~> 1.0.3"},
+      {:ephemeral, "~> 2.0.1"},
       {:erlydtl, "~> 0.11.0", hex: :erlydtl2}    
     ]
   end
@@ -38,8 +38,9 @@ defmodule Wok.Rest.Mixfile do
 
   defp compile_with_hooks(args) do
     pre_compile_hooks()
-    :ok = Mix.Task.run("compile", args)
+    result = Mix.Task.run("compile", args)
     post_compile_hooks()
+    result
   end
 
   defp pre_compile_hooks() do
