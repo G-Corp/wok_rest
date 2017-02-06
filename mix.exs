@@ -8,8 +8,8 @@ defmodule Wok.Rest.Mixfile do
       elixir: "~> 1.2",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
-      deps: deps,
-      aliases: aliases
+      deps: deps(),
+      aliases: aliases()
     ]
   end
 
@@ -23,11 +23,11 @@ defmodule Wok.Rest.Mixfile do
   defp deps do
     [
       {:lager, "~> 3.2.0"},
-      {:cowboy_default_static_file, git: "https://github.com/botsunit/cowboy_default_static_file.git", tag: "1.3.1"},
+      {:cowboy_default_static_file, git: "https://github.com/botsunit/cowboy_default_static_file.git", tag: "1.3.2"},
       {:cowboy, git: "https://github.com/ninenines/cowboy.git", tag: "2.0.0-pre.3"},
-      {:bucs, "~> 1.0.3"},
-      {:doteki, "~> 1.0.3"},
-      {:ephemeral, "~> 2.0.1"},
+      {:bucs, "~> 1.0.6"},
+      {:doteki, "~> 1.0.5"},
+      {:ephemeral, "~> 2.0.3"},
       {:erlydtl, "~> 0.11.0", hex: :erlydtl2}    
     ]
   end
